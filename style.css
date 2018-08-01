@@ -1,0 +1,63 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #e1fcff;
+}
+
+.center {
+    text-align: center;
+}
+
+#headerDiv {
+    color: #505050;
+    background: linear-gradient(rgba(132, 171, 171,1), rgba(225,252,255,1));
+    grid-area: header;
+    align-self: center;
+    font-size: 70px;
+}
+
+
+#footerDiv {
+    grid-area: footer;
+    color: darkseagreen;
+}
+
+#clear {
+    grid-area: clear;
+    justify-self: end;
+    align-self: center;
+}
+
+#sketch {
+    grid-area: sketch;
+    background-color: white;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+}
+
+#numOfSqaures {
+    grid-area: numOfSqaures;
+    justify-self: start;
+    align-self: center;
+}
+
+#container {
+    display: grid;
+    grid-template-columns: auto 285px 285px auto;
+    grid-template-rows: 145px auto 570px 40px;
+    grid-template-areas:
+        'header header header header'
+        '. numOfSqaures clear .'
+        '. sketch sketch .'
+        'footer footer footer footer';
+    
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+}
