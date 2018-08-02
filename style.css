@@ -15,19 +15,20 @@ body {
     color: #505050;
     background: linear-gradient(rgba(132, 171, 171,1), rgba(225,252,255,1));
     grid-area: header;
-    align-self: center;
-    font-size: 70px;
+    height: auto;
+    font-size: 150px;
 }
 
 
 #footerDiv {
     grid-area: footer;
+    align-self: end;
+    text-align: center;
+    margin-bottom: 6px;
     color: darkseagreen;
 }
 
-#clear {
-    grid-area: clear;
-    justify-self: end;
+.control {
     align-self: center;
 }
 
@@ -40,18 +41,17 @@ body {
 }
 
 #numOfSqaures {
-    grid-area: numOfSqaures;
     justify-self: start;
     align-self: center;
 }
 
 #container {
     display: grid;
-    grid-template-columns: auto 285px 285px auto;
-    grid-template-rows: 145px auto 570px 40px;
+    grid-template-columns: auto 310px 310px auto;
+    grid-template-rows: 170px 30px 620px auto;
     grid-template-areas:
         'header header header header'
-        '. numOfSqaures clear .'
+        '. controls controls .'
         '. sketch sketch .'
         'footer footer footer footer';
     
@@ -60,4 +60,19 @@ body {
     top: 0;
     left: 0;
     right: 0;
+}
+
+
+
+div {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+#controls {
+    grid-area: controls;
+    display: flex;
+    justify-content: space-between;
 }
