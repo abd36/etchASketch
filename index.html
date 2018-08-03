@@ -5,12 +5,12 @@
         <title>Etch-A-Sketch</title>
         <link rel="stylesheet" href="style.css">
     </head>
-    <body>
+    <body onmousedown="mouseDown()" onmouseup="mouseUp()">
         <div id='container'>
             <div id='headerDiv' class="center">Etch-A-Sketch</div>
             
             <div id='controls'>
-                <div class="control">n to change # of sqaures</div>
+                <div class="control">n to change # of squares</div>
                 <div class="control">d to toggle draw mode</div>
                 <div class="control">t to toggle colours</div>
                 <div class="control">c to clear</div>
@@ -18,7 +18,7 @@
 
             <div id='sketch'></div>
 
-            <div id='footerDiv'>@abd36</div>
+            <div id='footerDiv'></div>
         </div>
         
         <script src="script.js"></script>

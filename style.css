@@ -15,17 +15,16 @@ body {
     color: #505050;
     background: linear-gradient(rgba(132, 171, 171,1), rgba(225,252,255,1));
     grid-area: header;
-    height: auto;
-    font-size: 150px;
+    align-self: center;
+    font-size: 120px;
 }
 
 
 #footerDiv {
     grid-area: footer;
     align-self: end;
-    text-align: center;
-    margin-bottom: 6px;
-    color: darkseagreen;
+    display: flex;
+    justify-content: space-around;
 }
 
 .control {
@@ -40,15 +39,15 @@ body {
     grid-template-rows: repeat(10, 1fr);
 }
 
-#numOfSqaures {
+#numOfSquares {
     justify-self: start;
     align-self: center;
 }
 
 #container {
     display: grid;
-    grid-template-columns: auto 310px 310px auto;
-    grid-template-rows: 170px 30px 620px auto;
+    grid-template-columns: auto 280px 280px auto;
+    grid-template-rows: 130px 30px 560px auto;
     grid-template-areas:
         'header header header header'
         '. controls controls .'
@@ -69,7 +68,13 @@ div {
     padding: 0;
 }
 
-
+a {
+    color: #acc0c2;
+    font-weight: bold;
+    font-style: italic;
+    line-height: 30px;
+    text-decoration-line: none;
+}
 
 #controls {
     grid-area: controls;
